@@ -1,0 +1,25 @@
+/* body{
+   
+    background: url("img/anh2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    color: #FFF;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-style: italic;
+    text-align: center;;
+} */
+
+.test{
+    width: 200px;
+    margin: 30px 20px;
+    padding: 20px 10px;
+    border: 1px solid #000;
+    text-align: center;
+}
+

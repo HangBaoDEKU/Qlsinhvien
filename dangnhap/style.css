@@ -1,0 +1,70 @@
+
+.form-signup{
+    width: 100vh;
+    width: 100vw;
+}
+.table-signup{
+    padding: 60px 40px;
+    background-color: #aaa69d;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
+/* Chỉnh độ rộng của input */
+}
+.input-signup input[type="text"],.input-signup input[type="password"],.input-signup input[type="email"]{
+    border: 15px solid #fff ;
+}
+/* Chỉnh nút đăng ký, đăng nhập */
+input[type="submit"] {
+	font-size: 16px;
+	padding: 10px 65px;
+	background-color: black;
+	color: #FFF;
+	border: none;
+	border-radius: 0px;
+	outline: none;
+	float:none;
+	cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #fff;
+    color: red;
+}
+
+
+/* Khung background */
+body{
+   
+        background: url("img/anh2.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        color: #FFF;
+        font-family: 'Quicksand', sans-serif;
+        text-align: center;;
+}
+/* Chỉnh sửa file đăng nhập */
+
+.table-login{
+    padding: 10px 30px;
+    background-color: #aaa69d;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.input-login input[type="text"],.input-login input[type="password"],.input-login input[type="email"]{
+    border: 10px solid #fff ;
+}
+
+.title{
+    color: black;
+}
+
+
+
+
+

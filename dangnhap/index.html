@@ -1,0 +1,65 @@
+<!--
+    border: Thiết lập độ dày của đường viền bao xung quanh bảng và các ô
+    cellspacing: Thiết lập khoảng cách nằm giữa mỗi đường viền lân cận
+    cellpadding: Thiết lập khoảng cách vùng đệm trong các ô
+    bgcolor: màu 
+    width: Thiết lập chiều rộng cho bảng hoặc các ô
+    height: Thiết lập chiều cao cho bảng hoặc các ô
+    align: Canh lề
+    colspan: Số ô muốn gộp vào nhau theo chiều ngang
+    rowspan: Số ô muốn gộp vào nhau theo chiều dọc
+-->
+<!--Username: <input type="text" name=" "> <br><br>
+    Password: <input type="password" name=""> <br><br>
+                <input type="submit" value="Đăng nhập" name="">-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="Login"></div>
+        <form onsubmit="login()" >
+            <Table class="table-login" cellpadding="5" bgcolor="#aaa69d" align="center" >
+                <tr>
+                    <th colspan="2" class="title">CỔNG THÔNG TIN TUYỂN SINH</th>
+                </tr>
+                <tr>
+                    <td>Tên đăng nhập:</td>
+                    <td><div class="input-login"><input id="username" type="text" placeholder="Tài khoản" name=" "></div></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><div class="input-login"><input id="email" type="email" placeholder="Email" name=" "></div></td>
+                </tr>
+                <tr>
+                    <td>Mật khẩu: </td>
+                    <td><div class="input-login"><input id="password" type="password" id="password" placeholder="Mật khẩu" name=""></div></td>
+                
+                </tr>
+                
+                    <tr>
+                            <th colspan="2">
+                            <input type="submit" value="Đăng nhập" name="" ><br>
+                            </th>
+                    </tr>
+
+                <!-- <tr>
+                    <td align="center" colspan="2">
+                        Đăng ký ở đây<span>→</span>   <a href="signup.html">Nhấn đây</a> 
+                    </td>
+                </tr> -->
+            </Table>
+        </form>
+    </div>
+    
+    
+    <script src="main.js"></script>
+
+</body>
+</html>
+
