@@ -73,18 +73,18 @@
 
                 */
                 //cau lenh
-                $lietke_sql = "SELECT * FROM sinhvien ORDER BY id ASC";;
+                $lietke_sql = "SELECT * FROM sinhvien ORDER BY id ASC"; //sẽ lấy tất cả các hàng từ bảng "sinhvien" và sắp xếp chúng theo cột "id" theo thứ tự tăng dần 
                 //thuc thi cau lenh
                 $result = mysqli_query($conn, $lietke_sql);
                 // duyet qua result va in ra
-                while($r = mysqli_fetch_assoc($result)){
+                while($r = mysqli_fetch_assoc($result))
+                {
 
                 ?>
                 
                     <tr>
                         <td><?php echo $r['id'];?></td>
                         <td><?php echo $r['hoten'];?></td>
-                     
                         <td><?php echo $r['manghanh'];?></td>
                         <td><?php echo $r['makhoa'];?></td>
                     </tr>

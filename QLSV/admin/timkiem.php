@@ -61,7 +61,8 @@
 
         <?php
             require_once 'ketnoi.php';
-            if($_POST['noidungtk'] == NULL ){
+            if($_POST['noidungtk'] == NULL ) 
+            {
                 header("Location: xemtt.php");
             }
             elseif(isset($_POST['timk'])){
@@ -69,9 +70,11 @@
             }
             
         
-            $sql = "SELECT * FROM sinhvien WHERE masv LIKE '%$noidungtk%' or hoten LIKE '%$noidungtk%'";
+            $sql = "SELECT * FROM sinhvien WHERE masv LIKE '%$noidungtk%' or hoten LIKE '%$noidungtk%'"; //Chiếu tất cả các cột từ bảng sinh viên chọn masv giống biến noidungtk
             $result = mysqli_query($conn, $sql);
-            while($row = mysqli_fetch_array($result)){
+            while($row = mysqli_fetch_array($result)) 
+            // Hàm mysqli_fetch_array() được sử dụng để lấy một hàng dữ liệu từ kết quả trả về của truy vấn MySQL và trả về dưới dạng một mảng.
+            {
                 ?>
                     <td><?php echo $row['id'];?></td>
                     <td><?php echo $row['masv'];?></td>

@@ -57,7 +57,7 @@
         //ketnoi
         require_once 'ketnoi.php';
         //cau lenh
-        $lietke_sql = "SELECT * FROM sinhvien order by hoten, masv";
+        $lietke_sql = "SELECT * FROM sinhvien order by hoten, masv"; 
         //thuc thi cau lenh
         $result = mysqli_query($conn, $lietke_sql);
         // duyet qua result va in ra

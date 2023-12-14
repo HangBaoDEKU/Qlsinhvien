@@ -39,8 +39,11 @@
 
     <div class="container">
         <div class="canle">
-            <h1>Đăng ký nghành</h1> 
-            <form action="them.php" method="post" enctype="multipart/form-data">
+            <h1>Đăng ký ngành</h1> 
+            <form action="them.php" method="post" enctype="multipart/form-data"> 
+                <!-- Method post phương thức để gửi dữ liệu lên API: sever 
+                    enctype="multipart/form-data": Nó cho phép form gửi đi không chỉ các trường thông thường như text, number, mà còn có thể gửi cả file, image, và các loại dữ liệu media khác.
+                -->
                 <div class="form-group">
                     <label for="hoten">Họ tên</label>
                     <input type="text" id="hoten" class="form-control" name="hoten">
@@ -68,7 +71,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="manghanh">Mã nghành</label>
+                    <label for="manghanh">Mã ngành</label>
                     <input type="text" id="manghanh" name="manghanh" class="form-control">
                 </div>
 
