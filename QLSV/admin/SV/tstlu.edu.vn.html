@@ -27,8 +27,10 @@
     </section>
 
     <section id="contentpage">
-         <section style="padding-top: 10px;">
-            <img src="../anh/anh2.jpg" alt="ab" style="width: 100%;height: 500px;">
+         <section id="slideshow" style="padding-top: 10px;">
+            <img src="../anh/anh2.jpg" alt="ab" style="width: 100%;height: 500px;display: block;">
+            <img src="../anh/anh3.jpg" alt="ab" style="width: 100%;height: 500px;display: none;">
+            <img src="../anh/anh2.jpg" alt="ab" style="width: 100%;height: 500px;display: none;"> 
          </section>
          <div style="margin-top: 30px;margin-left: 10px; margin-right: 10px;width:100%; font-size: 20px;" >
             <div class="news-sumary ng-binding" style="text-align: center;">Là trường công lập đào tạo đa ngành, đa lĩnh vực, Trường Đại học Thủy lợi được đánh giá là một trong những trường đại học có cơ sở vật chất tốt nhất hiện nay.</div>
@@ -50,5 +52,23 @@
             <div ng-bind-html="newsitem.Tags" style="margin-top: 20px;text-align: center;" class="ng-binding"></div>
         </div>
     </section>
+
+    <script type="text/javascript">
+
+        let index = 0;
+        let img = document.querySelectorAll('#slideshow img') // Lấy các phần tử img
+
+        function showing(){
+            img[index].style.display = 'none';
+            index = (index + 1) % img.length;
+            img[index].style.display = 'block';
+        }
+
+        //Thay đổi hình sau 3 giay
+
+        setInterval(showing, 2000);
+
+
+    </script>
 </body>
 </html>
