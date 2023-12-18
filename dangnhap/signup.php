@@ -15,7 +15,7 @@
         }
         else if(strlen($password)<7){
             ?>
-            <script>alert("Mật khẩu quá ngắn");
+            <script>alert("Mật khẩu quá ngắn. Mật khẩu phải trên 8 kí tự");
             window.location.href="http://localhost:9999/signup.html";</script>
             <?php
 
@@ -35,14 +35,13 @@
             else{
                 $sql = "INSERT INTO taikhoan (username,password,email) VALUES ('$username','$password','$email')  ";
                 mysqli_query($conn,$sql);
-                echo"Đã đăng ký thành công";
+                ?>
+                <script>alert("Đăng kí thành công");
+                window.location.href="http://localhost:9999/index.html";</script>
+                <?php
             }
 
-        }
-
-
-        
-       
+        }   
     
     }
     else{

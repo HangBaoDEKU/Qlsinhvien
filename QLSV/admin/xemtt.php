@@ -67,13 +67,13 @@
 
                     SET @num := 0;
 
-                    UPDATE sinhvien SET id = @num := (@num+1);
+                    UPDATE hoso SET id = @num := (@num+1);
 
-                    ALTER TABLE sinhvien AUTO_INCREMENT = 1;
+                    ALTER TABLE hoso AUTO_INCREMENT = 1;
 
                 */
                 //cau lenh
-                $lietke_sql = "SELECT * FROM sinhvien ORDER BY id ASC"; //sẽ lấy tất cả các hàng từ bảng "sinhvien" và sắp xếp chúng theo cột "id" theo thứ tự tăng dần 
+                $lietke_sql = "SELECT * FROM hoso ORDER BY id ASC"; //sẽ lấy tất cả các hàng từ bảng "hoso" và sắp xếp chúng theo cột "id" theo thứ tự tăng dần 
                 //thuc thi cau lenh
                 $result = mysqli_query($conn, $lietke_sql);
                 // duyet qua result va in ra
@@ -85,7 +85,7 @@
                     <tr>
                         <td><?php echo $r['id'];?></td>
                         <td><?php echo $r['hoten'];?></td>
-                        <td><?php echo $r['manghanh'];?></td>
+                        <td><?php echo $r['manganh'];?></td>
                         <td><?php echo $r['makhoa'];?></td>
                     </tr>
                 

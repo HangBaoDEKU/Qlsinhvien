@@ -6,7 +6,7 @@ $id = $_GET['sid'];
 require_once 'ketnoi.php';
 
 //cau lenh de lay thong tin ve sinh vien có id = $id
-$edit_sql ="SELECT * FROM sinhvien WHERE id=$id";
+$edit_sql ="SELECT * FROM hoso WHERE id=$id";
 
 $result = mysqli_query($conn, $edit_sql);
 $row = mysqli_fetch_assoc($result);
@@ -48,8 +48,8 @@ $row = mysqli_fetch_assoc($result);
 
 
             <div class="form-group">
-                <label for="masv">Mã Thí Sinh</label>
-                <input type="text" id="masv" name="masv" class="form-control" value="<?php echo $row['masv']?>" >
+                <label for="mats">Mã Thí Sinh</label>
+                <input type="text" id="mats" name="mats" class="form-control" value="<?php echo $row['mats']?>" >
             </div>
 
 
@@ -65,8 +65,8 @@ $row = mysqli_fetch_assoc($result);
             
             
             <div class="form-group">
-                <label for="manghanh">Mã nghành</label>
-                <input type="text" id="manghanh" name="manghanh" class="form-control" value="<?php echo $row['manghanh']?>">
+                <label for="manganh">Mã nghành</label>
+                <input type="text" id="manganh" name="manganh" class="form-control" value="<?php echo $row['manganh']?>">
             </div>
 
 

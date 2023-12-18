@@ -76,16 +76,16 @@
         }
         
     
-        $sql = "SELECT * FROM sinhvien WHERE masv LIKE '%$noidungtk%' ";
+        $sql = "SELECT * FROM hoso WHERE mats LIKE '%$noidungtk%' ";
         $result = mysqli_query($conn, $sql);
         while($row = mysqli_fetch_array($result)){
             ?>
-                <td><?php echo $row['masv'];?></td>
+                <td><?php echo $row['mats'];?></td>
                 <td><?php echo $row['hoten'];?></td>
                 <td><?php echo $row['ntm'];?></td>
                 <td><?php echo $row['email'];?></td>
                 <td><?php echo $row['diem'];?></td>
-                <td><?php echo $row['manghanh'];?></td>
+                <td><?php echo $row['manganh'];?></td>
                 <td><?php echo $row['makhoa'];?></td>
                 <td><?php echo $row['sdt'];?></td>
                 <td><?php echo $row['qq'];?></td>

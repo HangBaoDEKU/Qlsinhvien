@@ -29,7 +29,7 @@
     
 
     <div>
-        <form method="post" action="timkiem.php">
+        <form method="post" action="timkiemlk.php">
             <input type="text" name="noidungtk">
             <button type="submit" name="timk">Tìm kiếm</button>
         </form>
@@ -57,7 +57,7 @@
         //ketnoi
         require_once 'ketnoi.php';
         //cau lenh
-        $lietke_sql = "SELECT * FROM sinhvien order by hoten, masv"; 
+        $lietke_sql = "SELECT * FROM hoso order by hoten, mats"; 
         //thuc thi cau lenh
         $result = mysqli_query($conn, $lietke_sql);
         // duyet qua result va in ra
@@ -66,12 +66,12 @@
         ?>
            
             <tr>
-                <td><?php echo $r['masv'];?></td>
+                <td><?php echo $r['mats'];?></td>
                 <td><?php echo $r['hoten'];?></td>
                 <td><?php echo $r['ntm'];?></td>
                 <td><?php echo $r['email'];?></td>
                 <td><?php echo $r['diem'];?></td>
-                <td><?php echo $r['manghanh'];?></td>
+                <td><?php echo $r['manganh'];?></td>
                 <td><?php echo $r['makhoa'];?></td>
                 <td><?php echo $r['sdt'];?></td>
                 <td><?php echo $r['qq'];?></td>
@@ -101,7 +101,7 @@
 
             <!-- Modal body -->
             <div class="modal-body">
-            <form action="them.php" method="post" enctype="multipart/form-data">
+            <form action="themlk.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="hoten">Họ tên</label>
                     <input type="text" id="hoten" class="form-control" name="hoten">
@@ -113,8 +113,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="masv">Mã Thí Sinh</label>
-                    <input type="text" id="masv" name="masv" class="form-control">
+                    <label for="mats">Mã Thí Sinh</label>
+                    <input type="text" id="mats" name="mats" class="form-control">
                 </div>
 
 
@@ -129,8 +129,8 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="manghanh">Mã nghành</label>
-                    <input type="text" id="manghanh" name="manghanh" class="form-control">
+                    <label for="manganh">Mã nghành</label>
+                    <input type="text" id="manganh" name="manganh" class="form-control">
                 </div>
 
 

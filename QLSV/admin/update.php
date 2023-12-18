@@ -1,9 +1,9 @@
 <?php
 //nhận dữ liệu từ form file them.html
 $ht = $_POST['hoten'];
-$masv = $_POST['masv'];
+$mats = $_POST['mats'];
 $email = $_POST['email'];
-$manghanh = $_POST['manghanh'];
+$manganh = $_POST['manganh'];
 $makhoa = $_POST['makhoa'];
 $id = $_POST['sid'];
 $sdt = $_POST['sdt'];
@@ -23,12 +23,12 @@ require_once 'ketnoi.php';
 
 //viet lenh sql de them dữ liệu
 
-if($masv == NULL or $ht == NULL or $email == NULL or $manghanh == NULL or $makhoa ==NULL or $sdt == NULL or $qq == NULL  ){
+if($mats == NULL or $ht == NULL or $email == NULL or $manganh == NULL or $makhoa ==NULL or $sdt == NULL or $qq == NULL  ){
     echo "Bạn chưa nhập đầy đủ thông tin";
 }
 else{
-    $updatesql = "UPDATE sinhvien SET
-    masv = '$masv', hoten='$ht', ntm='$ntm', email= '$email', diem = '$diem', manghanh='$manghanh', makhoa='$makhoa', sdt = '$sdt', qq='$qq',img = '$hinhanhpath'
+    $updatesql = "UPDATE hoso SET
+    mats = '$mats', hoten='$ht', ntm='$ntm', email= '$email', diem = '$diem', manganh='$manganh', makhoa='$makhoa', sdt = '$sdt', qq='$qq',img = '$hinhanhpath'
     WHERE id='$id' ";
     //echo $updatesql; exit;
 

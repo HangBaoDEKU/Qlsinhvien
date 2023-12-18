@@ -33,7 +33,7 @@ if($mats == NULL or $ht == NULL or $email == NULL or $manganh == NULL or $makhoa
     // echo "Bạn chưa nhập đầy đủ thông tin";
     ?>
         <script>alert("Bạn chưa nhập đầy đủ thông tin");
-         window.location.href="http://localhost:8888/them.html";</script>
+         window.location.href="http://localhost:8888/lietke.php";</script>
     <?php
 }
 
@@ -46,13 +46,13 @@ elseif (mysqli_num_rows($result) == 0)  //mysqli_num_rows() được sử dụng
     // echo "<h1> Them thanh cong </h1>";
     ?>
         <script>alert("Bạn đã đăng ký thành công");
-        window.location.href="http://localhost:8888/hschitiet.php";</script>
+        window.location.href="http://localhost:8888/lietke.php";</script>
     <?php
 } 
 else {
     ?>
-    <script>alert("Mã sinh viên đã được đăng kí."+"Mời bạn xem lại hoặc liên hệ với trường");
-     window.location.href="http://localhost:8888/them.html";</script>
+    <script>alert("Mã sinh viên đã được đăng kí.");
+     window.location.href="http://localhost:8888/lietke.php";</script>
     <?php
 }    
 

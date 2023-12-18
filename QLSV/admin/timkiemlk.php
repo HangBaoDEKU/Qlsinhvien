@@ -1,5 +1,5 @@
 
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,22 +19,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <section id="header">
-            <section class="sub-head" id="logo"><img src="anh2.png" alt="ab"></section>
-            <section class="sub-head" id="menu">
-                <ul id="danhmuc">
-                <li class="tag" id="tag1"><a class="a-tag" href="http://localhost:8888/SV/tstlu.edu.vn.html">GIỚI THIỆU</a></li>
-                <li class="tag" id="tag2"><a class="a-tag" href="http://localhost:8888/them.html">ĐĂNG KÝ</a></li>
-                <li class="tag"><a class="a-tag" href="http://localhost:8888/xemtt.php">DANH SÁCH</a></li>
-                <li class="tag"><a class="a-tag" href="http://localhost:8888/hschitiet.php">HỒ SƠ</a></li>
-                <li class="tag"><a class="a-tag" href="../SV/huongdan.html">HƯỚNG DẪN</a></li>
-                <li class="tag"><a class="a-tag" href="http://localhost:8888/SV/lienhe.html">LIÊN HỆ</a></li>
-                </ul>
-            </section>
-            <section class="sub-head" id="button1">
-                <input class="btn" type="submit" name="" id="" value="Tư vấn ngay">
-            </section>
-    </section>
+    
 
 
 
@@ -42,7 +27,7 @@
         <div class="canle"> 
             <h1>Danh sách sinh viên đăng ký</h1>
             <div>
-                <form method="post" action="timkiem.php">
+                <form method="post" action="timkiemlk.php">
                     <input type="text" name="noidungtk">
                     <button type="submit" name="timk">Tìm kiếm</button>
                 </form>
@@ -55,6 +40,10 @@
                     <th>Họ tên</th>
                     <th>Nghành</th>
                     <th>Khoa</th>
+                    <th>Số điện thoại</th>
+                    <th>Quê quán</th>
+                    <th>Ảnh</th>
+                    <th>Thao tác</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -63,7 +52,7 @@
             require_once 'ketnoi.php';
             if($_POST['noidungtk'] == NULL ) 
             {
-                header("Location: xemtt.php");
+                header("Location: lietke.php");
             }
             elseif(isset($_POST['timk'])){
                 $noidungtk = $_POST['noidungtk'];
@@ -81,7 +70,13 @@
                     <td><?php echo $row['hoten'];?></td>
                     <td><?php echo $row['manganh'];?></td>
                     <td><?php echo $row['makhoa'];?></td>
-                                
+                    <td><?php echo $row['sdt'];?></td>
+                    <td><?php echo $row['qq'];?></td>
+                    <td><a href="upload/<?php echo $row['img'];?>" target="_blank"><?php echo $row['img'];?><br></a></td>
+                    <td>
+                        <a href="edit.php?sid=<?php echo $row['id'];?>" class="btn btn-info">Sửa</a> 
+                        <a onclick="return confirm('Bạn có muốn xóa sinh viên này không ');" href="xoa.php?sid=<?php echo $row['id'];?>" class="btn btn-danger">Xóa</a>
+                    </td>      
                             
                 <?php
             }

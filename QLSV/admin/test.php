@@ -33,9 +33,9 @@
         <?php
             //nhận dữ liệu từ form file them.html
             $ht = $_POST['hoten'];
-            $masv = $_POST['masv'];
+            $mats = $_POST['mats'];
             $email = $_POST['email'];
-            $manghanh = $_POST['manghanh'];
+            $manganh = $_POST['manganh'];
             $makhoa = $_POST['makhoa'];
             $sdt = $_POST['sdt'];
             $qq = $_POST['qq'];
@@ -57,12 +57,12 @@
 
             //viet lenh sql de them dữ liệu
 
-            if($masv == NULL or $ht == NULL or $email == NULL or $manghanh == NULL or $makhoa ==NULL or $sdt == NULL or $qq == NULL or $diem == NULL ){
+            if($mats == NULL or $ht == NULL or $email == NULL or $manganh == NULL or $makhoa ==NULL or $sdt == NULL or $qq == NULL or $diem == NULL ){
                 echo "Bạn chưa nhập đầy đủ thông tin";
             }
             else{
-                $themsql = "INSERT INTO sinhvien
-                (masv, hoten, ntm, email, manghanh, makhoa, sdt, qq, diem, img) VALUES ('$masv','$ht', '$ntm','$email','$manghanh','$makhoa','$sdt','$qq', '$diem', '$hinhanhpath')";
+                $themsql = "INSERT INTO hoso
+                (mats, hoten, ntm, email, manganh, makhoa, sdt, qq, diem, img) VALUES ('$mats','$ht', '$ntm','$email','$manganh','$makhoa','$sdt','$qq', '$diem', '$hinhanhpath')";
                 //thực thi câu lệnh
                 mysqli_query($conn, $themsql);
                 // echo "<h1> Them thanh cong </h1>";
