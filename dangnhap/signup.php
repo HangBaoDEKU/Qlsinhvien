@@ -22,13 +22,6 @@
 
         }
 
-        else if($manv != "MNVTLU"){
-            ?>
-            <script>alert("Hãy nhập đúng mã mà trường cung cấp để đăng ký");
-            window.location.href="http://localhost:9999/signup.html";</script>
-            <?php
-        }
-
         else{
              // Kiểm tra xem có email đã tồn tại hay chưa
             $sql = "SELECT * FROM taikhoan WHERE email= '$email' ";
@@ -44,7 +37,7 @@
                 $sql = "INSERT INTO taikhoan (username,password,email) VALUES ('$username','$password','$email')  ";
                 mysqli_query($conn,$sql);
                 ?>
-                <script>alert("Đăng kí thành công");
+                <script>alert("Thêm thành công tài khoản cho nhân viên");
                 window.location.href="http://localhost:9999/index.html";</script>
                 <?php
             }
