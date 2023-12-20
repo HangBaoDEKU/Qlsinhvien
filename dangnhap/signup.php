@@ -7,6 +7,7 @@
         $email = $_POST["email"];
         $password = $_POST["password"];
         $repassword = $_POST["repassword"];
+        $manv = $_POST["manv"];
         if($password != $repassword){    //Kiểm tra xem nhập lại mật khẩu có trùng với mật khẩu hay không
             ?>
             <script>alert("Mật khẩu không trùng mời kiểm tra lại");
@@ -19,6 +20,13 @@
             window.location.href="http://localhost:9999/signup.html";</script>
             <?php
 
+        }
+
+        else if($manv != "MNVTLU"){
+            ?>
+            <script>alert("Hãy nhập đúng mã mà trường cung cấp để đăng ký");
+            window.location.href="http://localhost:9999/signup.html";</script>
+            <?php
         }
 
         else{
